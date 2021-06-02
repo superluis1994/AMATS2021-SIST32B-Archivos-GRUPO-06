@@ -99,8 +99,8 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+   <!-- ======= Hero Section ======= -->
+   <section id="hero" class="d-flex align-items-center">
     <div class="container">
       <h1>BIENVENIDO A SALUD 360</h1>
       <h2>El mejor m&eacutedico es el que mejor inspira confianza
@@ -134,16 +134,17 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Agendar consulta</h4>
-                    <p>Uno de los objetivos del software médico Salud 360 es ayudarte a optimizar cada uno de los procesos de tu clínica de forma sencilla,
-                     tareas como agendar una cita o llevar tu registro completo.</p>
+                    <h4> Misi&oacuten</h4>
+                    <p>"Contribuir a la creación y difusión del conocimiento médico, a través de la investigación.
+Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la prevención y el desarrollo de la salud de la población”.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Equipo moderno</h4>
-                    <p>La atención personalizada al paciente es lo que distingue a Salud 360. Puede esperar recibir una atención de primera clase.</p>
+                    <h4>Visi&oacuten</h4>
+                    <p>Crear y sostener un sistema integral de salud privada, que ofrezca un espacio
+                     de crecimiento y desarrollo profesional enfocado en la excelencia y calidez en la asistencia al paciente y su familia.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
