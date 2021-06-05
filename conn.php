@@ -16,6 +16,8 @@ class clsConexion{
             echo $e->errorMessage();
         }
     }
+
+
 }
 
 ?>
