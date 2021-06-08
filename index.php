@@ -440,8 +440,8 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">Cuanto cuesta la consulta <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapsed" href="#faq-list-1">Cuanto cuesta la consulta <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse " data-parent=".faq-list">
                 <p>
                   Cuesta un total de 12$
                 </p>
@@ -474,7 +474,43 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
                 </p>
               </div>
             </li>
-
+            
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapsed" href="#faq-list-5"> ¿De que forma puedo hacer la consulta? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse " data-parent=".faq-list">
+                <p>
+                  Las puede realizar desde cualquier dispositivo, tanto android como ios, y desde windows, además cuenta desde un diseño muy amigable.
+          
+                </p>
+              </div>
+            </li>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapsed" href="#faq-list-6"> ¿De que forma puedo realizar el pago? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-6" class="collapse " data-parent=".faq-list">
+                <p>
+                  Las puede realizar el mismo día que asista asu consulta.
+                </p>
+              </div>
+            </li>
+            </li>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapsed" href="#faq-list-7"> ¿Si requiero de un examen, está incluido en la consulta? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-7" class="collapse " data-parent=".faq-list">
+                <p>
+                  No, pero si lo desea puede hacerlo con un pequeño monto adicional.
+                </p>
+              </div>
+            </li>
+            </li>
+            </li>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapsed" href="#faq-list-8"> ¿Si necesitaré de medicina, está incluido? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-8" class="collapse " data-parent=".faq-list">
+                <p>
+                  No, pero sí cuenta con una receta.
+                </p>
+              </div>
+            </li>
            
 
           </ul>
