@@ -358,7 +358,7 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
 
         <div class="section-title">
           <h2>Doctores Recomendados</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>En este Apartado Se muestran Doctores/as que el Dr. Carlos Gonzalez Recomienda, cada uno con diferentes especialidades Para el cuidado de la salud</p>
         </div>
 
         <div class="row">
@@ -368,13 +368,11 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
               <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <span>Dr. Cirujano</span>
+                <p>Doctor que sea capaz de prevenir, diagnosticar y curar enfermedades ejerciendo la cirugía. </p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://es-la.facebook.com/raziel.salinas.5074"><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.instagram.com/walterwhite6728/"><i class="ri-instagram-fill"></i></a>
                 </div>
               </div>
             </div>
@@ -385,13 +383,11 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
               <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
-                <span>Anesthesiologist</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <span>Anesteciologa</span>
+                <p>El anestesiólogo es el médico especialista que se encarga de velar por tu seguridad y bienestar durante cualquier cirugía o procedimiento </p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://es-la.facebook.com/sara.jhonson.73"><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.instagram.com/sarahjhonson89/"><i class="ri-instagram-fill"></i></a>
                 </div>
               </div>
             </div>
@@ -402,13 +398,11 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
               <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
-                <span>Cardiology</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <span>Cardiologo</span>
+                <p>Los cardiólogos son médicos que se especializan en el diagnóstico y tratamiento de las enfermedades del corazón y los vasos sanguíneos</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://www.facebook.com/profile.php?id=100069061961720"><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.instagram.com/william96anderson/"><i class="ri-instagram-fill"></i></a>
                 </div>
               </div>
             </div>
@@ -419,13 +413,11 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
               <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <span>Neurocirujana</span>
+                <p>La Neurocirujana trata las enfermedades del disco intervertebral de la columna vertebral.</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://www.facebook.com/ajepsonessex"><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.instagram.com/amandajepson/?hl=es"><i class="ri-instagram-fill"></i></a>
                 </div>
               </div>
             </div>
