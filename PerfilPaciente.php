@@ -1,5 +1,5 @@
 <?php
-require_once('conn.php');
+// <--require_once('procesosPHP/conexion.php');-->
 ?>
 <!doctype html>
 <html lang="es">
@@ -55,32 +55,32 @@ require_once('conn.php');
 
             <ul class="nav">
                 <li class="active">
-                    <a href="Perfil.php?pagina=admin/Estadisticas.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/Cita.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>listado de citas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=admin/UsuariosT.php">
+                    <a href="PerfilPaciente.php?pagina=admin/UsuariosT.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>recetas</p>
                     </a>
                 </li>
             
                 <li>
-                    <a href="Perfil.php?pagina=paciente/Cita.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/Cita.php">
                         <i class="pe-7s-user"></i>
                         <p>perfil</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=paciente/user.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/user.php">
                         <i class="pe-7s-user"></i>
                         <p>historial de citas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=paciente/Recetas.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/Recetas.php">
                         <i class="pe-7s-note2"></i>
                         <p>comentarios</p>
                     </a>
