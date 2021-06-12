@@ -1,5 +1,5 @@
 <?php
-require_once('conn.php');
+// require_once('conn.php');
 ?>
 <!doctype html>
 <html lang="es">
@@ -61,7 +61,7 @@ require_once('conn.php');
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilDoctor.php?pagina=admin/UsuariosT.php">
+                    <a href="PerfilDoctor.php?pagina=doctor/archivo-paciente.php">
                         <i class="pe-7s-user"></i>
                         <p>INFORME DEL PACIENTE</p>
                     </a>
