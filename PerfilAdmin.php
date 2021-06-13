@@ -1,5 +1,6 @@
 <?php
-require_once('conn.php');
+require_once('procesoPHP/conexion.php');
+$obj=new clsConexion();
 ?>
 <!doctype html>
 <html lang="es">
@@ -8,7 +9,7 @@ require_once('conn.php');
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>Administrador</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -54,67 +55,43 @@ require_once('conn.php');
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="Perfil.php?pagina=admin/Estadisticas.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Estadisticas</p>
-                    </a>
-                </li>
                 <li>
-                    <a href="Perfil.php?pagina=admin/UsuariosT.php">
+                    <a href="PerfilAdmin.php?pagina=admin/RegistarPersonal.php">
                         <i class="pe-7s-user"></i>
-                        <p>Usurios</p>
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="Perfil.php?pagina=Mantenimiento.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Mantenimiento</p>
+                        <p>Registar Personal</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=paciente/Cita.php">
+                    <a href="PerfilAdmin.php?pagina=admin/asignacionSecretaria.php">
+                        <i class="pe-7s-science"></i>
+                        <p>Asignacion Secretaria</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="PerfilAdmin.php?pagina=admin/UsuariosRegistrados.php">
+                        <i class="pe-7s-graph"></i>
+                        <p>Usuarios Registrados</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="PerfilAdmin.php?pagina=paciente/Cita.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>Citas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=paciente/user.php">
+                    <a href="PerfilAdmin.php?pagina=paciente/user.php">
                         <i class="pe-7s-user"></i>
                         <p>Datos Personales</p>
                     </a>
                 </li>
                 <li>
-                    <a href="Perfil.php?pagina=paciente/Recetas.php">
-                        <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
+                    <a href="PerfilAdmin.php?pagina=admin/Estadisticas.php">
+                        <i class="pe-7s-graph"></i>
+                        <p>Estadisticas</p>
                     </a>
                 </li>
-                
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-				<li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
+          
             </ul>
     	</div>
     </div>
@@ -129,7 +106,7 @@ require_once('conn.php');
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Administrador</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -210,8 +187,8 @@ require_once('conn.php');
       }
 	  else{
 
-     echo" <h1>Bienvenido a la NBA</h1>
-    <p class='lead'>¡En Hora Buena! has entrado en la pagina oficial de la NBA. desde aqui podras editar los equipos</p>
+     echo" <h1>Bienvenido </h1>
+    <p class='lead'>¡En Hora Buena! has entrado a tu perfil de administrador</p>
     <p class='lead'>
       <a href='index.php?pagina=listaEquipo.php' class='btn btn-lg btn-secondary fw-bold border-white bg-white' > <font style='color:black;'>COMENZAR</font> </a>
     </p>";
@@ -279,6 +256,8 @@ require_once('conn.php');
 	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script> 
+    <script src="jquery/jquery-3.3.1.min.js"></script> 
 	<script src="assets/js/demo.js"></script>
 
 	<script type="text/javascript">
@@ -286,16 +265,12 @@ require_once('conn.php');
 
         	demo.initChartist();
 
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
-
-            },{
+        	( {
                 type: 'info',
                 timer: 4000
             });
 
     	});
 	</script>
-
+ 
 </html>

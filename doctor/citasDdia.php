@@ -21,13 +21,16 @@
                         <th>City</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Dakota Rice</td>
-                            <td>$36,738</td>
-                            <td>Niger</td>
-                            <td>Oud-Turnhout</td>
-                        </tr>
+                    <?php
+                        $result=$obj->consultaPersonal("Consultas","id_doctor","1");
+                        while ($cols = $result->fetch_assoc()){
+                        echo"<tr>
+                            <td>".$colDoc["id_consultas"]."</td>
+                            <td>".$colDoc["nombreCompleto"]."</td>
+                            <td>".$colsDoc["fecha_consulta"]."</td>
+                        </tr>";
+                        }
+                        ?>
                        
                     </tbody>
                 </table>

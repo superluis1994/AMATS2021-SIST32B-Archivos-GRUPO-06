@@ -23,18 +23,7 @@ define('BASEDATOS','salud360');
   $res=$this->com->query($sql);
         return $res;
 }
-function consultaUniversal($tabla,$campo,$dato)
-{
-  $sql="SELECT *FROM $tabla WHERE $campo='$dato'";
-  $res=$this->com->query($sql);
-        return $res;
-}
-function consultaUniversal2($tabla,$campo,$dato)
-{
-  $sql="SELECT *FROM $tabla WHERE $campo='$dato'";
-  $res=$this->com->query($sql);
-        return $res;
-}
+
 function loguin($correo,$pass)
 {
   $sql="SELECT *FROM usuarios WHERE correo='' AND passw='1994'";
@@ -49,14 +38,6 @@ function RegistrarPersonal($usuario,$nombreCompleto,$correo,$pass,$tipo)
   $inser=$this->com->query($sql);
         return $inser;
 }
-function asignarSecretaria($idDoctor,$idSecretaria)
-{
-  $sql="INSERT INTO asignaciondoctosecre (id_doctor,id_secretaria)
-  VALUES('$idDoctor','$idSecretaria');";
-  $inser=$this->com->query($sql);
-        return $inser;
-}
-
 }
 
 ?>

@@ -1,5 +1,6 @@
 <?php
-// require_once('conn.php');
+require_once('procesoPHP/conexion.php');
+$obj=new clsConexion();
 ?>
 <!doctype html>
 <html lang="es">
@@ -67,7 +68,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilDoctor.php?pagina=paciente/Cita.php">
+                    <a href="PerfilDoctor.php?pagina=doctor/Cita.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>GENERAR CITA</p>
                     </a>
@@ -178,9 +179,7 @@
 
 
 
-                <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+                
             </div>
         </footer>
 
