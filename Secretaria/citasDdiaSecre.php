@@ -2,9 +2,15 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">Striped Table with Hover</h4>
-                <p class="category">Here is a subtitle for this table</p>
+                <h4 class="title">CITAS</h4>
+                <p class="category">AGENDADAS</p>
             </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                
+                <input type="text" class="form-control" placeholder="Buscar Archivo" value="">
+                </div>
+                </div>
             <div class="content table-responsive table-full-width">
                 <table class="table table-hover table-striped">
                     <thead>
@@ -22,6 +28,7 @@
                             <td>Niger</td>
                             <td>Oud-Turnhout</td>
                         </tr>
+                       
                     </tbody>
                 </table>
 
@@ -30,9 +37,6 @@
     </div>
 
 
-    <div class="col-md-12">
-       
-    </div>
-
+  
 
 </div>

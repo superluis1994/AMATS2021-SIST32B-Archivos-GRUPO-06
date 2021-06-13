@@ -61,26 +61,26 @@
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilPaciente.php?pagina=admin/UsuariosT.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/Recetas.php">
                         <i class="pe-7s-news-paper"></i>
                         <p>recetas</p>
                     </a>
                 </li>
             
                 <li>
-                    <a href="PerfilPaciente.php?pagina=paciente/Cita.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/historialCitas.php">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>historial de citas</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="PerfilPaciente.php?pagina=paciente/perfil.php">
                         <i class="pe-7s-user"></i>
                         <p>perfil</p>
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilPaciente.php?pagina=paciente/user.php">
-                        <i class="pe-7s-user"></i>
-                        <p>historial de citas</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="PerfilPaciente.php?pagina=paciente/Recetas.php">
+                    <a href="PerfilPaciente.php?pagina=paciente/comentarios.php">
                         <i class="pe-7s-note2"></i>
                         <p>comentarios</p>
                     </a>

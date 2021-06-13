@@ -55,8 +55,8 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="PerfilDoctor.php?pagina=admin/Estadisticas.php">
-                        <i class="pe-7s-graph"></i>
+                    <a href="PerfilDoctor.php?pagina=doctor/citasDdia.php">
+                        <i class="pe-7s-news-paper"></i>
                         <p>CITAS DEL DIA</p>
                     </a>
                 </li>
@@ -66,12 +66,6 @@
                         <p>INFORME DEL PACIENTE</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="PerfilDoctor.php?pagina=paciente/user.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>PERFIL</p>
-                    </a>
-                </li>
                 <li>
                     <a href="PerfilDoctor.php?pagina=paciente/Cita.php">
                         <i class="pe-7s-news-paper"></i>
@@ -79,8 +73,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilDoctor.php?pagina=admin/Estadisticas.php">
+                    <a href="PerfilDoctor.php?pagina=doctor/perfil.php">
                         <i class="pe-7s-user"></i>
+                        <p>PERFIL</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="PerfilDoctor.php?pagina=admin/Estadisticas.php">
+                        <i class="pe-7s-graph"></i>
                         <p>ESTADISTICA</p>
                     </a>
                 </li>
@@ -137,13 +137,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">
-                               <p>CUENTA</p>
+                               <p>Cuenta</p>
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                <p>INICIO DE SECIÓNt</p>
+                                <p>Cerrar la sesión</p>
                             </a>
                         </li>
 						<li class="separator hidden-lg"></li>
