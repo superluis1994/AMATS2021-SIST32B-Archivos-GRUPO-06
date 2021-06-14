@@ -1,4 +1,7 @@
-
+<?php
+include("procesoPHP/conexion.php");
+$obj=new clsConexion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,8 +65,8 @@
 							</button>
 						</div>
 
-						<a href="#" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							Sign in
+						<a href="registrar.php" class="dis-block txt3 hov1 p-r-20 p-t-10 p-b-5 p-l-15">
+							Crear Cuenta
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
 					</div>
@@ -75,21 +78,26 @@
    if(isset($_POST["enviarlog"]))
    {
       
-
-	   if(mysqli_num_rows( $G ) > 0)
+        $log=$obj->loguin($_POST["correo"],$_POST["pass"]);
+	   if($log->num_rows > 0)
 	   {
-        $tip=$G->fetch_assoc();
-           if($tip["tipo"]=="doctor")
+        $tip=$log->fetch_assoc();
+		var_dump($tip);
+           if($tip["tipo"]=="Doctor")
            {
-		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='2;URL=doctor.php'>";
+		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilDoctor.php'>";
            }
-          else if($tip["tipo"]=="secretaria")
+          else if($tip["tipo"]=="Secretaria")
            {
-		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='2;URL=doctor.php'>";
+		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilSecretaria.php'>";
            }
-          else if($tip["tipo"]=="cliente")
+          else if($tip["tipo"]=="paciente")
            {
-		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='2;URL=doctor.php'>";
+		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilPaciente.php'>";
+           }
+		   else if($tip["tipo"]=="admin")
+           {
+		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php'>";
            }
 	   }
        else

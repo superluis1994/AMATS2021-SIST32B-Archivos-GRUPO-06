@@ -35,12 +35,6 @@ function consultaUniversal2($tabla,$campo,$dato)
   $res=$this->com->query($sql);
         return $res;
 }
-function loguin($correo,$pass)
-{
-  $sql="SELECT *FROM usuarios WHERE correo='' AND passw='1994'";
-  $res=$this->com->query($sql);
-        return $res;
-}
 
 function RegistrarPersonal($usuario,$nombreCompleto,$correo,$pass,$tipo)
 {
@@ -56,6 +50,19 @@ function asignarSecretaria($idDoctor,$idSecretaria)
   $inser=$this->com->query($sql);
         return $inser;
 }
+function loguin($correo,$pass)
+{
+  $sql="SELECT *FROM usuarios WHERE correo='$correo' AND passw='$pass'";
+  $res=$this->com->query($sql);
+        return $res;
+}
+  function reg($usuario,$nombreCompleto,$correo,$passw,$tipo)
+  {
+    $sql="INSERT INTO usuarios(usuario , nombreCompleto , correo , passw , tipo)
+      VALUES('$usuario','$nombreCompleto','$correo','$passw','$tipo');";
+    $inser=$this->com->query($sql);
+          return $inser;
+  }
 
 }
 

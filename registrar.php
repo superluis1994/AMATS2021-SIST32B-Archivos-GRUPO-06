@@ -1,3 +1,8 @@
+<?php
+
+include("procesoPHP/conexion.php");
+$obj=new clsConexion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +112,18 @@
 			</div>
 		</div>
 	</div>
+	<?php
+   if(isset($_POST["enviar"]))
+   {
+       $G=$obj->reg($_POST["usuario"],$_POST["nombre"],$_POST["correo"],$_POST["pass"],"cliente");
+	   if($G)
+	   {
+		   echo "se registro";
+	   }
+   }
 
+
+  ?>
  <!-- final  france -->
        <!--===============================================================================================-->
 	   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
