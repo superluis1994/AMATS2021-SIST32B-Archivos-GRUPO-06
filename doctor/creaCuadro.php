@@ -55,7 +55,7 @@ $obj=new clsConexion();
 if(isset($_POST["CreaCuadro"]))
 { 
     $result3=$obj->consultaUniversal("cuadropaciente","id_paciente",$_POST["CreaCuadro"]);
-    if($result3->num_rows==0)
+    if($result3->num_rows==1)
     {
          $idPaciente=$_POST["CreaCuadro"];
    echo"<div class='col-md-8'>

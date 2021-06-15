@@ -146,6 +146,21 @@ function insercuadroId($id)
   $res=$this->com->query($sql);
         return $res;
 }
+// paciente 
+function citaPaciente($dato1)
+{
+  $sql="SELECT *FROM recetas WHERE id_paciente='$dato1'";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function Recetainser($id_paciente,$nombre_medicina,$doctor,$fecha_de_receta,$id_cuadro)
+{
+  $sql="INSERT INTO recetas (id_paciente,nombre_medicina,doctor,fecha_de_receta,id_cuadro)
+  VALUES('$id_paciente','$nombre_medicina','$doctor','$fecha_de_receta','$id_cuadro');";
+  $res=$this->com->query($sql);
+        return $res;
+}
+
 
 }
 

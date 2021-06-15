@@ -66,12 +66,6 @@ $obj=new clsConexion();
                         <p>Registar Personal</p>
                     </a>
                 </li>
-                <li>
-                    <a href="PerfilAdmin.php?pagina=admin/asignacionSecretaria.php">
-                        <i class="pe-7s-science"></i>
-                        <p>Asignacion Secretaria</p>
-                    </a>
-                </li>
                 <li >
                     <a href="PerfilAdmin.php?pagina=admin/UsuariosRegistrados.php">
                         <i class="pe-7s-graph"></i>

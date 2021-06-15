@@ -2,8 +2,8 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">Striped Table with Hover</h4>
-                <p class="category">Here is a subtitle for this table</p>
+                <h4 class="title">Recetas Medicas</h4>
+                <p class="category">Historial de recetas</p>
             </div>
             <div class="content table-responsive table-full-width">
                 <table class="table table-hover table-striped">
@@ -15,13 +15,18 @@
                         <th>City</th>
                     </thead>
                     <tbody>
+                    <?php
+                        $resultL=$obj->citaPaciente("recetas","id_paciente",$_SESSION["usarioActivo"][1][0]);
+                        while ($colD = $resultL->fetch_assoc()){
+                        echo" <form action='' method='POST'>
                         <tr>
-                            <td>1</td>
-                            <td>Dakota Rice</td>
-                            <td>$36,738</td>
-                            <td>Niger</td>
-                            <td>Oud-Turnhout</td>
-                        </tr>
+                            <td>".$colD["id_usuario"]."</td>
+                            <td>".$colD["nombreCompleto"]."</td>
+                            <td>".$colD["tipo"]."</td>
+                            <td> <button type='submit' name='ok1' value='".$colD["id_usuario"]."' class='btn btn-info btn-fill pull-right'>elimina</button></td>
+                        </tr></form>";
+                        }
+                        ?>
                     </tbody>
                 </table>
 

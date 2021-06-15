@@ -80,6 +80,12 @@ $obj=new clsConexion();
                     </a>
                 </li>
                 <li>
+                    <a href="PerfilDoctor.php?pagina=doctor/recetarMedicamento.php">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>GENERAR Receta</p>
+                    </a>
+                </li>
+                <li>
                     <a href="PerfilDoctor.php?pagina=doctor/perfil.php">
                         <i class="pe-7s-user"></i>
                         <p>PERFIL</p>

@@ -1,6 +1,11 @@
 <?php
+require_once('procesoPHP/conexion.php');
+$obj=new clsConexion();
 require_once("procesoPHP/conexion.php");
 session_start();
+$ConsulPerfil=$obj->consultaUniversal("usuarios","id_usuario",$_SESSION["usarioActivo"][1][0]);
+
+$rop=$ConsulPerfil->fetch_assoc();
 ?>
 <!doctype html>
 <html lang="es">
