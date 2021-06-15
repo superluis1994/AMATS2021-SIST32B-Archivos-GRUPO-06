@@ -82,29 +82,39 @@ $obj=new clsConexion();
         $log=$obj->loguin($_POST["correo"],$_POST["pass"]);
 	   if($log->num_rows > 0)
 	   {
+		   
         $tip=$log->fetch_assoc();
            if($tip["tipo"]=="Doctor")
            {
 			$datt[]=$tip["id_usuario"];
-			$_SESSION["usarioActivo"]=$datt;
+			$datt[]=$tip["nombreCompleto"];
+			$t[1]=$datt;
+			$_SESSION["usarioActivo"]=$t;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilDoctor.php'>";
            }
           else if($tip["tipo"]=="Secretaria")
            {
 			$datt[]=$tip["id_usuario"];
-			$_SESSION["usarioActivo"]=$datt;
+			$datt[]=$tip["nombreCompleto"];
+			$t[1]=$datt;
+			$_SESSION["usarioActivo"]=$t;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilSecretaria.php'>";
            }
-          else if($tip["tipo"]=="paciente")
+          else if($tip["tipo"]=="Paciente")
            {
 			$datt[]=$tip["id_usuario"];
-			$_SESSION["usarioActivo"]=$datt;
+			$datt[]=$tip["nombreCompleto"];
+			$t[1]=$datt;
+			$_SESSION["usarioActivo"]=$t;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilPaciente.php'>";
+		   echo"si entro";
            }
 		   else if($tip["tipo"]=="admin")
            {
 			$datt[]=$tip["id_usuario"];
-			$_SESSION["usarioActivo"]=$datt;
+			$datt[]=$tip["nombreCompleto"];
+			$t[1]=$datt;
+			$_SESSION["usarioActivo"]=$t;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php'>";
            }
 	   }

@@ -2,7 +2,7 @@
 require_once('procesoPHP/conexion.php');
 $obj=new clsConexion();
 
-$ConsulPerfil=$obj->consultaUniversal("usuarios","id_usuario",$_SESSION["usarioActivo"][0]);
+$ConsulPerfil=$obj->consultaUniversal("usuarios","id_usuario",$_SESSION["usarioActivo"][1][0]);
 
 $rowsss=$ConsulPerfil->fetch_assoc();
 

@@ -22,12 +22,13 @@
                         <?php
                         $resultL=$obj->consultaPersonal("Doctor");
                         while ($colD = $resultL->fetch_assoc()){
-                        echo"<tr>
+                        echo" <form action='' method='POST'>
+                        <tr>
                             <td>".$colD["id_usuario"]."</td>
                             <td>".$colD["nombreCompleto"]."</td>
                             <td>".$colD["tipo"]."</td>
-                            <td> <button type='submit' class='btn btn-info btn-fill pull-right'>elimina</button></td>
-                        </tr>";
+                            <td> <button type='submit' name='ok1' value='".$colD["id_usuario"]."' class='btn btn-info btn-fill pull-right'>elimina</button></td>
+                        </tr></form>";
                         }
                         ?>
                     </tbody>
@@ -58,16 +59,18 @@
                     <th>Tipo</th>
                    
                 </thead>
+                <form action='' method='POST'></form>
                 <tbody>
                     <?php
                         $result=$obj->consultaPersonal("Secretaria");
                         while ($colSS = $result->fetch_assoc()){
-                        echo"<tr>
+                        echo"<form action=''name='2' method='POST'>
+                        <tr>
                             <td>".$colSS["id_usuario"]."</td>
                             <td>".$colSS["nombreCompleto"]."</td>
                             <td>".$colSS["tipo"]."</td>
-                            <td> <button type='submit' class='btn btn-info btn-fill pull-right'>elimina</button></td>
-                        </tr>";
+                            <td> <button type='submit' name='ok2' value='".$colSS["id_usuario"]."' class='btn btn-info btn-fill pull-right'>elimina</button></td>
+                        </form> </tr>";
                         }
                         ?>
                 </tbody>
@@ -104,12 +107,13 @@
                     <?php
                     $result=$obj->consultaPersonal("pacientes");
                     while ($colP = $result->fetch_assoc()){
-                    echo"<tr>
+                    echo"<form action='' name='3' method='POST'>
+                    <tr>
                         <td>".$colP["id_usuario"]."</td>
                         <td>".$colP["nombreCompleto"]."</td>
                         <td>".$colP["tipo"]."</td>
-                        <td> <button type='submit' class='btn btn-info btn-fill pull-right'>elimina</button></td>
-                    </tr>";
+                        <td> <button type='submit' name='ok3' value='".$colP["id_usuario"]."' class='btn btn-info btn-fill pull-right'>elimina</button></td>
+                    </tr></form>";
                     }
                     ?>
                 </tbody>
@@ -120,3 +124,27 @@
     </div>
 
 </div>
+<?php
+if(isset($_POST["ok1"]) )
+{
+   echo $_POST["ok1"];
+   echo $_POST["ok2"];
+   echo $_POST["ok3"];
+
+   $obj->EliminarXid($_POST["ok1"]);
+   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php?pagina=admin/UsuariosRegistrados.php'>";
+}
+else if(isset($_POST["ok2"]))
+{
+   $obj->EliminarXid($_POST["ok2"]);
+   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php?pagina=admin/UsuariosRegistrados.php'>";
+
+}
+else if(isset($_POST["ok3"]))
+{
+   $obj->EliminarXid($_POST["ok3"]);
+   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php?pagina=admin/UsuariosRegistrados.php'>";
+
+}
+
+?>

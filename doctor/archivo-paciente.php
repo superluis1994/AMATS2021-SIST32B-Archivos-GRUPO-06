@@ -42,15 +42,20 @@
                         
                     </thead>
                     <tbody>
+                        <?php
+                        $result=$obj->consultaCuadroMe("Paciente");
+                        while ($colCP = $result->fetch_assoc()){
+                        echo"<form action='' method='POST'>
                         <tr>
-                            <td>1</td>
-                            <td>Dakota Rice</td>
-                            <td>$36,738</td>
-                            <td>Niger</td>
-                            <td><button type="submit" class="btn btn-info btn-fill pull-right">Ver cuadro</button></td>
-                            <td><button type="submit" class="btn btn-info btn-fill pull-right">Eliminar Cuadro</button></td>
-
+                            <td>".$colCP["id_usuario"]."</td>
+                            <td>".$colCP["nombreCompleto"]."</td>
+                            <td>".$colCP["tipo"]."</td>
+                            <input type='text' name='nombre' value='".$colCP["nombreCompleto"]."' hidden>
+                            <td> <button type='submit' name='gConPac' value='".$colCP["id_usuario"]."' class='btn btn-info btn-fill pull-right'>Procesar</button></td>
                         </tr>
+                    </form>";
+                        }
+                        ?>
                        
                     </tbody>
                 </table>

@@ -23,6 +23,7 @@ define('BASEDATOS','salud360');
   $res=$this->com->query($sql);
         return $res;
 }
+
 function consultaUniversal($tabla,$campo,$dato)
 {
   $sql="SELECT *FROM $tabla WHERE $campo='$dato'";
@@ -65,10 +66,10 @@ function loguin($correo,$pass)
   }
 
   // crud doctor
-  function CrearCuadroPaciente($edad,$peso,$altura,$discapcidad,$tipo_sangre,$ciudad,$departamento,$idPaciente,$idCuadro)
+  function CrearCuadroPaciente($edad,$peso,$altura,$discapcidad,$tipo_sangre,$ciudad,$departamento,$idPaciente)
   {
     $sql="UPDATE cuadropaciente SET edad = '$edad', peso = '$peso', altura = '$altura', discapcidad = '$discapcidad', tipo_sangre = '$tipo_sangre', 
-    ciudad = '$ciudad', departamento = '$departamento', id_paciente = '$idPaciente' WHERE id_cuadro = '$idCuadro';";
+    ciudad = '$ciudad', departamento = '$departamento' WHERE id_paciente = '$idPaciente'";
     $inser=$this->com->query($sql);
           return $inser;
   }
@@ -77,6 +78,13 @@ function loguin($correo,$pass)
   $sql="SELECT *FROM $tabla INNER JOIN cuadropaciente ON usuarios.id_usuario = cuadropaciente.id_paciente WHERE $campo='$dato' and $campo2='$dato2'";
   $res=$this->com->query($sql);
         return $res;
+}
+function generarCita($fecha_agendacion,$fecha_consulta,$id_paciente,$doctor)
+{
+  $sql="INSERT INTO consultas(fecha_agendacion,fecha_consulta,id_paciente,doctor )
+  VALUES('$fecha_agendacion','$fecha_consulta','$id_paciente','$doctor');";
+  $inser=$this->com->query($sql);
+        return $inser;
 }
 
 }

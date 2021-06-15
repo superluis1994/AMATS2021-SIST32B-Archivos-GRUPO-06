@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querybuilder version="8.3">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">salud360</database>
+</source>
+<canvas>
+<table tablename="asignaciondoctosecre" alias="" left="296" top="57" width="150" height="113" />
+<table tablename="consultas" alias="" left="727" top="219" width="150" height="113" />
+<table tablename="cuadropaciente" alias="" left="53" top="41" width="150" height="113" />
+<table tablename="recetas" alias="" left="574" top="74" width="150" height="113" />
+<table tablename="usuarios" alias="" left="239" top="189" width="150" height="113" />
+<join type = "Inner Join">
+<from tablename = "consultas" alias = "">id_paciente</from>
+<to tablename = "usuarios" alias = "">id_usuario</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "cuadropaciente" alias = "">id_paciente</from>
+<to tablename = "usuarios" alias = "">id_usuario</to>
+</join>
+<join type = "Inner Join">
+<from tablename = "recetas" alias = "">id_paciente</from>
+<to tablename = "usuarios" alias = "">id_usuario</to>
+</join>
+</canvas>
+<grid>
+</grid>
+</querybuilder>

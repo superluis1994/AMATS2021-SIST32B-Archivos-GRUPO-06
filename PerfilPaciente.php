@@ -1,5 +1,5 @@
 <?php
-require_once('procesosPHP/conexion.php');
+require_once("procesoPHP/conexion.php");
 session_start();
 ?>
 <!doctype html>
@@ -9,7 +9,7 @@ session_start();
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>Perfil Paciente</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -53,7 +53,7 @@ session_start();
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
+                    PANCIENTE
                 </a>
             </div>
 
@@ -103,7 +103,7 @@ session_start();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Proceso</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -170,7 +170,7 @@ session_start();
      echo" <h1>BIENVENIDO  A TU PERFIL  DE SALUD360 </h1>
     <p class='lead'>¡En Hora Buena! has entrado atu perfil </p>
     <p class='lead'>
-      <a href='index.php?pagina=listaEquipo.php' class='btn btn-lg btn-secondary fw-bold border-white bg-white' > <font style='color:black;'>VER PERFIL</font> </a>
+      <a href='PerfilPaciente.php?pagina=paciente/perfil.php' class='btn btn-lg btn-secondary fw-bold border-white bg-white' > <font style='color:black;'>VER PERFIL</font> </a>
     </p>";
 
 	  }

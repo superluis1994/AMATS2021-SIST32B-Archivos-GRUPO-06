@@ -2,6 +2,7 @@
 session_start();
 require_once('procesoPHP/conexion.php');
 $obj=new clsConexion();
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -105,7 +106,7 @@ $obj=new clsConexion();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Procesos</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -115,34 +116,12 @@ $obj=new clsConexion();
 								<p class="hidden-lg hidden-md">Dashboard</p>
                             </a>
                         </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-lg hidden-md"></b>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
+                        
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
+                           <a href="PerfilDoctor.php?pagina=doctor/perfil.php">
                                <p>Cuenta</p>
                             </a>
                         </li>
@@ -168,7 +147,7 @@ $obj=new clsConexion();
 
       }
 	  else{
-        echo $p=$_SESSION["usarioActivo"][0];
+     
      echo" <h1>BIENVENIDO A TU PERFIL DE SALUD 360</h1>
     <p class='lead'>Donde quiera que se ama el arte de la medicina se ama también a la humanidad.</p>
     <p class='lead'>

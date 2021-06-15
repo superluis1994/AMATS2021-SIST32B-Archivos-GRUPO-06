@@ -118,7 +118,10 @@ $obj=new clsConexion();
        $G=$obj->reg($_POST["usuario"],$_POST["nombre"],$_POST["correo"],$_POST["pass"],"Paciente");
 	   if($G)
 	   {
-		   echo "se registro";
+		   $t=$obj->consultaUniversal("usuarios","correo",trim($_POST["correo"]));
+		   $dt=$t->fetch_assoc();
+		   $obj->insercuadroId($dt["id_usuario"]);
+		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='1;URL=loguin.php'>";
 	   }
    }
 

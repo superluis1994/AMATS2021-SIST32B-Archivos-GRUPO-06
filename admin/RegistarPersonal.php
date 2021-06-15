@@ -6,7 +6,7 @@
                 <h4 class="title">Registrar Personal</h4>
             </div>
             <div class="content">
-                <form action="procesoPHP/admin/InsertarPersonal.php" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
@@ -57,41 +57,31 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-info btn-fill pull-right">Registar Personal</button>
+                    <button type="submit" name='inserP' class="btn btn-info btn-fill pull-right">Registar Personal</button>
                     <div class="clearfix"></div>
                 </form>
                 
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card card-user">
-            <div class="image">
-                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
-            </div>
-            <div class="content">
-                <div class="author">
-                     <a href="#">
-                    <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
-
-                      <h4 class="title">Mike Andrew<br />
-                         <small>michael24</small>
-                      </h4>
-                    </a>
-                </div>
-                <p class="description text-center"> "Lamborghini Mercy <br>
-                                    Your chick she so thirsty <br>
-                                    I'm in that two seat Lambo"
-                </p>
-            </div>
-            <hr>
-            <div class="text-center">
-                <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
-
-            </div>
-        </div>
-    </div>
+    <?php
+    if(isset($_POST["inserP"])){
+        $D=$obj->consultaUniversal("usuarios","correo",$_POST['correo']);
+        $repe=$D->num_rows;
+        if($repe<1)
+        {
+    $inser=$obj->RegistrarPersonal($_POST["usuario"],ucwords($_POST["nombre"]." ".$_POST["apellidos"]),$_POST["correo"],$_POST["pass"],$_POST["tipo"]);
+    if( $inser)
+    {
+        echo"<h2>Dato introducido</h2>";
+       echo "<META HTTP-EQUIV='REFRESH' CONTENT='2;URL=PerfilAdmin.php?pagina=admin/RegistarPersonal.php'>";
+    }
+}
+else{
+    echo "<h1> ya exite un usuario con es correo</h1>";
+    echo "<META HTTP-EQUIV='REFRESH' CONTENT='2;URL=PerfilAdmin.php?pagina=admin/RegistarPersonal.php'>";
+}
+}
+    ?>
 
 </div>

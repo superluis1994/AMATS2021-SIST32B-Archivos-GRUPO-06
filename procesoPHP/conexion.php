@@ -36,6 +36,12 @@ function consultaUniversal2($tabla,$campo,$dato)
         return $res;
 }
 
+function EliminarXid($id)
+{
+  $sql="DELETE FROM usuarios WHERE id_usuario='$id'";
+  $res=$this->com->query($sql);
+        return $res;
+}
 function RegistrarPersonal($usuario,$nombreCompleto,$correo,$pass,$tipo)
 {
   $sql="INSERT INTO usuarios (usuario,nombreCompleto,correo, passw,tipo)
@@ -75,6 +81,68 @@ function loguin($correo,$pass)
   function consultaPacientes($tabla,$campo,$dato,$campo2,$dato2)
 {
   $sql="SELECT *FROM $tabla INNER JOIN cuadropaciente ON usuarios.id_usuario = cuadropaciente.id_paciente WHERE $campo='$dato' and $campo2='$dato2'";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function generarCita($fecha_agendacion,$fecha_consulta,$horaConsul,$id_paciente,$doctor)
+{
+  $sql="INSERT INTO consultas(fecha_agendacion,fecha_consulta,horaConsulta,id_paciente,doctor )
+  VALUES('$fecha_agendacion','$fecha_consulta','$horaConsul','$id_paciente','$doctor');";
+  $inser=$this->com->query($sql);
+        return $inser;
+}
+function consultaCitaRepetida($tabla,$dato,$dato2)
+{
+  $sql="SELECT *FROM $tabla WHERE fecha_consulta='$dato' and  horaConsulta='$dato2'";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function actualizarDoctorPerfil($usuario,$nombreCompleto,$correo,$passw,$foto,$id_usuario)
+{
+  if($foto=="nada")
+  {
+    $sql="UPDATE usuarios SET usuario = '$usuario', nombreCompleto = '$nombreCompleto', correo = '$correo', passw = '$passw'
+    WHERE id_usuario = '$id_usuario'";
+      $res=$this->com->query($sql);
+            return $res;
+
+  }else{
+     $sql="UPDATE usuarios SET usuario = '$usuario', nombreCompleto = '$nombreCompleto', correo = '$correo', passw = '$passw', foto = '$foto'
+WHERE id_usuario = '$id_usuario'";
+  $res=$this->com->query($sql);
+        return $res;
+  }
+ 
+}
+
+function pacientesDia($tabla,$campo,$dato,$campo2,$dato1)
+{
+  $sql="SELECT *FROM $tabla INNER JOIN usuarios ON consultas.id_paciente=usuarios.id_usuario  WHERE $campo='$dato' And $campo2='$dato1' ";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function citas($tipo)
+{
+  $sql="SELECT *FROM $tipo ";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function Eliminar($tabla,$campo,$id)
+{
+  $sql="DELETE FROM $tabla WHERE $campo='$id'";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function consultaCuadroMe($tipo)
+{
+  $sql="SELECT *FROM usuarios INNER JOIN cuadropaciente ON cuadropaciente.id_cuadro = usuarios.id_usuario WHERE tipo='$tipo' And id_paciente=!null";
+  $res=$this->com->query($sql);
+        return $res;
+}
+function insercuadroId($id)
+{
+  $sql="INSERT INTO cuadropaciente (id_paciente)
+  VALUES('$id');";
   $res=$this->com->query($sql);
         return $res;
 }
