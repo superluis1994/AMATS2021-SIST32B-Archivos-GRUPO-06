@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("procesoPHP/conexion.php");
 $obj=new clsConexion();
 ?>
@@ -82,21 +83,28 @@ $obj=new clsConexion();
 	   if($log->num_rows > 0)
 	   {
         $tip=$log->fetch_assoc();
-		var_dump($tip);
            if($tip["tipo"]=="Doctor")
            {
+			$datt[]=$tip["id_usuario"];
+			$_SESSION["usarioActivo"]=$datt;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilDoctor.php'>";
            }
           else if($tip["tipo"]=="Secretaria")
            {
+			$datt[]=$tip["id_usuario"];
+			$_SESSION["usarioActivo"]=$datt;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilSecretaria.php'>";
            }
           else if($tip["tipo"]=="paciente")
            {
+			$datt[]=$tip["id_usuario"];
+			$_SESSION["usarioActivo"]=$datt;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilPaciente.php'>";
            }
 		   else if($tip["tipo"]=="admin")
            {
+			$datt[]=$tip["id_usuario"];
+			$_SESSION["usarioActivo"]=$datt;
 		   echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL=PerfilAdmin.php'>";
            }
 	   }

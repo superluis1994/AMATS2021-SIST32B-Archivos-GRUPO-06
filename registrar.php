@@ -115,7 +115,7 @@ $obj=new clsConexion();
 	<?php
    if(isset($_POST["enviar"]))
    {
-       $G=$obj->reg($_POST["usuario"],$_POST["nombre"],$_POST["correo"],$_POST["pass"],"cliente");
+       $G=$obj->reg($_POST["usuario"],$_POST["nombre"],$_POST["correo"],$_POST["pass"],"Paciente");
 	   if($G)
 	   {
 		   echo "se registro";

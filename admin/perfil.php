@@ -1,47 +1,39 @@
+<?php
+require_once('procesoPHP/conexion.php');
+$obj=new clsConexion();
+
+$ConsulPerfil=$obj->consultaUniversal("usuarios","id_usuario",$_SESSION["usarioActivo"][0]);
+
+$rowsss=$ConsulPerfil->fetch_assoc();
+
+?>
+
 <!-- datos del perfil  -->
 <div class="row">
     <div class="col-md-8">
         <div class="card">
             <div class="header">
-                <h4 class="title">Registrar Personal</h4>
+                <h4 class="title">Editar Perfil</h4>
             </div>
             <div class="content">
-                <form action="procesoPHP/admin/InsertarPersonal.php" method="POST" enctype="multipart/form-data">
+                <form>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label>Usuario</label>
-                                <input type="text" class="form-control" name="usuario" placeholder="Luis">
+                                <input type="text" class="form-control" placeholder="Username" value="<?php echo $rowsss["usuario"] ?>">
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Contraseña</label>
-                                <input type="password" class="form-control" name="pass" placeholder="********">
+                                <label for="pass">Contraseña</label>
+                                <input type="text" value="<?php echo $rowsss['passw'] ?>" class="form-control" id="pass">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" name="nombre" placeholder="Company" value="Mike">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Apellidos</label>
-                                <input type="text" class="form-control" name="apellidos" placeholder="Last Name" value="Andrew">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Correo Electronico</label>
-                                <input type="email" name="correo" class="form-control" placeholder="Ejemplo@hotmail.com" >
+                                <label for="exampleInputEmail1">Foto</label>
+                                <input type="file"  class="form-control">
                             </div>
                         </div>
                     </div>
@@ -49,18 +41,20 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Tipo</label>
-                                <select class="form-control" name="tipo" id="">
-                                    <option selected class="form-control" value="Secretaria">Secretaria</option>
-                                    <option class="form-control" value="Doctor">Doctor</option>
-                                </select>
+                                <label for="exampleInputEmail1">Correo</label>
+                                <input type="email" value="<?php echo $rowsss['correo'] ?>" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label>Nombre Completo</label>
+                                <input type="text" class="form-control" value="<?php echo $rowsss["nombreCompleto"] ?>" placeholder="Company" value="Mike">
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-info btn-fill pull-right">Registar Personal</button>
+                    <button type="submit" class="btn btn-info btn-fill pull-right">Editar Perfil</button>
                     <div class="clearfix"></div>
                 </form>
-                
             </div>
         </div>
     </div>

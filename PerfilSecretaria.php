@@ -33,6 +33,9 @@ require_once('procesoPHP/conexion.php');
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+    <!-- validacion de los input -->
+  <script src="validacion/inpuyValidacion.js"></script>
+
 </head>
 <body>
 
@@ -142,7 +145,7 @@ require_once('procesoPHP/conexion.php');
                         </li>
                       
                         <li>
-                            <a href="#">
+                            <a href="cerrarSession.php">
                                 <p>Cerrar Sesión</p>
                             </a>
                         </li>

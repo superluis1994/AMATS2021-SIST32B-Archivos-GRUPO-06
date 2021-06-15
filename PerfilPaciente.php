@@ -1,5 +1,6 @@
 <?php
-// <--require_once('procesosPHP/conexion.php');-->
+require_once('procesosPHP/conexion.php');
+session_start();
 ?>
 <!doctype html>
 <html lang="es">
@@ -32,6 +33,9 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!-- validacion de los input -->
+  <script src="validacion/inpuyValidacion.js"></script>
+
 
 </head>
 <body>
@@ -142,7 +146,7 @@
                         </li>
                        
                         <li>
-                            <a href="#">
+                            <a href="cerrarSession.php">
                                 <p>cerrar seccion</p>
                             </a>
                         </li>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('procesoPHP/conexion.php');
 $obj=new clsConexion();
 ?>
@@ -33,6 +34,10 @@ $obj=new clsConexion();
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+<!-- validacion de los input -->
+  <script src="validacion/inpuyValidacion.js"></script>
+
+
 
 </head>
 <body>
@@ -143,7 +148,7 @@ $obj=new clsConexion();
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="cerrarSession.php">
                                 <p>Cerrar la sesión</p>
                             </a>
                         </li>
@@ -163,7 +168,7 @@ $obj=new clsConexion();
 
       }
 	  else{
-
+        echo $p=$_SESSION["usarioActivo"][0];
      echo" <h1>BIENVENIDO A TU PERFIL DE SALUD 360</h1>
     <p class='lead'>Donde quiera que se ama el arte de la medicina se ama también a la humanidad.</p>
     <p class='lead'>

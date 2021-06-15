@@ -13,8 +13,19 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Crear cuadro</button>
-                            
+                           
+                            <form action="PerfilDoctor.php?pagina=doctor/creaCuadro.php" method="POST">
+                            <button type="submit" name="cuadro" class="btn btn-info btn-fill pull-right">Crear cuadro</button>
+                            </form>
+                            <?php
+                            // if(isset($_POST["cuadro"]))
+                            // {
+                            //     echo "<META HTTP-EQUIV='REFRESH' CONTENT='0;URL= PerfilDoctor.php?pagina=doctor/creaCuadro.php'>";
+                               
+
+                            // }
+
+                            // ?>
                                
                             </div> 
                         </div>

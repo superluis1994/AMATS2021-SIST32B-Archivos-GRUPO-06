@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('procesoPHP/conexion.php');
 $obj=new clsConexion();
 ?>
@@ -33,6 +34,9 @@ $obj=new clsConexion();
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!-- validacion de los input -->
+  <script src="validacion/inpuyValidacion.js"></script>
+
 
 </head>
 <body>
@@ -74,13 +78,7 @@ $obj=new clsConexion();
                     </a>
                 </li>
                 <li>
-                    <a href="PerfilAdmin.php?pagina=paciente/Cita.php">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Citas</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="PerfilAdmin.php?pagina=paciente/user.php">
+                    <a href="PerfilAdmin.php?pagina=admin/perfil.php">
                         <i class="pe-7s-user"></i>
                         <p>Datos Personales</p>
                     </a>
@@ -166,8 +164,8 @@ $obj=new clsConexion();
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
-                                <p>Log out</p>
+                            <a href="cerrarSession.php">
+                                <p>Cerarr Sesion</p>
                             </a>
                         </li>
 						<li class="separator hidden-lg"></li>
