@@ -49,7 +49,7 @@ session_destroy();
       <div class="contact-info mr-auto">
         <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">clinicasalud360@outlook.com</a>
         <i class="icofont-phone"></i> +503 3456-7832
-        <i class="icofont-google-map"></i> avenida santa lucia santa ana 
+        <i class="icofont-google-map"></i> Avenida santa lucia santa ana 
       </div>
       <div class="social-links">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
@@ -65,7 +65,7 @@ session_destroy();
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php">SALUD360</a></h1>
+      <h1 class="logo mr-auto"><a href="index.php">SALUD 360</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -78,12 +78,12 @@ session_destroy();
           <li><a href="#doctors">Doctor</a></li>
          
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contacto</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="loguin.php" class="appointment-btn scrollto">INICIAR SESSION</a>
+      <a href="loguin.php" class="appointment-btn scrollto">INICIAR SESIÓN</a>
 
     </div>
   </header><!-- End Header -->
@@ -107,7 +107,7 @@ session_destroy();
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Qu&eacute es salud 360?</h3>
+              <h3>¿Qu&eacute es salud 360?</h3>
               <p>
               Estado en que un ser u organismo vivo se encuentra en su mejor forma y estado, no padece ninguna enfermedad y ejerce con normalidad todas
                sus actividades.
@@ -618,7 +618,7 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Contacto</h2>
           <p>NOS UBICAMOS EN SANTA ANA SOMOS CLINICA SALUD360 ENCUENTRANOS ATU ALACANCE PUEDES RESERVAR TU CITA O LLAMARNOS AL NUMERO# 3456-7832</p>
         </div>
       </div>
@@ -634,20 +634,20 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
+                <h4>LOCALIZACIÓN:</h4>
                 <p>6a avenida sur santa ana</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
+                <h4>CORREO:</h4>
                 <p>clinicasalud360@outlook.com</p>
               </div>
 
 
               <div class="phone">
                 <i class="icofont-phone"></i>
-                <h4>Call:</h4>
+                <h4>TELÉFONO:</h4>
                 <p>+503 3456-7832</p>
               </div>
 
@@ -679,9 +679,9 @@ Proyectar nuestra acción a la comunidad, por medio de acciones dirigidas a la p
               <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">TU MENSAJE HA SUDIO ENVIADO. GRACIAS!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
             </form>
 
           </div>
